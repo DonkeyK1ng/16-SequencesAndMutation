@@ -72,6 +72,14 @@ def RETURN_delete_negatives(numbers):
     #             m6_mutation.run_test(...)
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
+    i=[]
+    for k in range(len(numbers)):
+
+        if(numbers[k]>=0):
+            i.append(numbers[k])
+
+    return i
+
 
 
 def run_test_MUTATE_delete_negatives():
@@ -138,6 +146,10 @@ def MUTATE_delete_negatives(numbers):
     #       then ask for help as needed.
     # HINT #2: Why might it be wise to start at the end and
     #       work backwards through the list to the beginning?
+    for k in range(len(numbers)-1,-1,-1):
+        if(numbers[k]<0):
+            del numbers[k]
+
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being

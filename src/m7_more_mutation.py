@@ -175,6 +175,9 @@ def RETURN_circle(circle, color):
     #          (using the above code for testing).
     #
     # HINT: Use the   clone   method to make the copy.
+    new_circle=circle.clone()
+    new_circle.fill_color=color
+    return new_circle
 
 
 def run_test_MUTATE_circle():
@@ -306,6 +309,15 @@ def MUTATE_circle(circle, color, n):
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
     # HINT: This function can be implemented with just TWO lines of code.
+    circle.fill_color=color
+    # center of the circle should be moved 100 to the right
+    # circle.center.x change to 100 points + 800
+    # circle.center.y doesnt change
+    # circle.center.x=100+800
+    # circle.center.x=100+circle.center.x
+    circle.center.x=n+circle.center.x
+
+    # circle.move_center_to()
 
 
 # ----------------------------------------------------------------------
